@@ -8,20 +8,20 @@ eleventyExcludeFromCollections: true
     <subtitle>{{ metadata.summary }}</subtitle>
     <link href="{{ metadata.feedUrl }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
-    <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <updated>{{ collections.works | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     <id>{{ metadata.url }}</id>
     <author>
         <name>Claudia R</name>
     </author>
 
-    {%- for article in collections.blog -%}
-    {% set absolutePostUrl %}{{ article.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    {%- for work in collections.works -%}
+    {% set absolutePostUrl %}{{ work.url | url | absoluteUrl(metadata.url) }}{% endset %}
     <entry>
-        <title>{{ article.data.title }}</title>
+        <title>{{ work.data.title }}</title>
         <link href="{{ absolutePostUrl }}"/>
-        <updated>{{ article.date | dateToRfc3339 }}</updated>
+        <updated>{{ work.date | dateToRfc3339 }}</updated>
         <id>{{ absolutePostUrl }}</id>
-        {% set excerpt = article.data.excerpt %}
+        {% set excerpt = work.data.excerpt %}
         <content type="html">{{ excerpt | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
     </entry>
     {%- endfor -%}

@@ -51,7 +51,7 @@ module.exports = function(eleventyConfig) {
   /*=================*/
   /*   Collections   */
   /*=================*/
-  eleventyConfig.addCollection('blog', getAllPosts)
+  eleventyConfig.addCollection('works', getAllPosts)
   eleventyConfig.addCollection('categoryList', getCategoryList)
   eleventyConfig.addCollection('categorisedPosts', getCategorisedPosts)
 
@@ -66,12 +66,6 @@ module.exports = function(eleventyConfig) {
   /*    shortcodes   */
   /*=================*/
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode)
-
-
-  /*=================*/
-  /*   image sizes   */
-  /*=================*/
-  // eleventyConfig.setLibrary('md', markdown)
 
 
   return {

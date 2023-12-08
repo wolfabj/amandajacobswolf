@@ -1,0 +1,14 @@
+<ul class="works__list">
+{% for work in works | reverse %}
+  <li class="work__item">
+    <article class="work__preview">
+      <h2><a href="{{ work.url | url }}">{{ work.data.title }}</a></h2>
+      <p>{{ work.data.excerpt }}</p>
+      <small>
+        <time>{{ work.data.date | readableDate }}</time>
+        <a class="category" href="/works/{{ work.data.category }}">{{ work.data.category }}</a>
+      </small>
+    </article>
+  </li>
+{% endfor %}
+</ul>

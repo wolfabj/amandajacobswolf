@@ -1,17 +1,17 @@
 const slugify = require('slugify')
 
-/* Creating a collection containing all blogposts by filtering based on folder and filetype */
+/* Creating a collection containing all works by filtering based on folder and filetype */
 const getAllPosts = (collectionApi) => {
-  return collectionApi.getFilteredByGlob('./src/blog/*.md')
+  return collectionApi.getFilteredByGlob('./src/works/*.md')
   .reverse()
 }
 
 const getCategoryList = (collectionApi) => {
   const catPages = []
   let categories = []
-  const blogPosts = collectionApi.getFilteredByGlob('./src/blog/*.md')
+  const works = collectionApi.getFilteredByGlob('./src/works/*.md')
 
-  blogPosts.map((item) => {
+  works.map((item) => {
     categories.push(item.data.category)
   })
 
@@ -35,7 +35,7 @@ const getCategoryList = (collectionApi) => {
 const getCategorisedPosts = (collectionApi) => {
   const categorisedPosts = {}
 
-  collectionApi.getFilteredByGlob('./src/blog/*.md').forEach(item => {
+  collectionApi.getFilteredByGlob('./src/works/*.md').forEach(item => {
     const category = item.data.category
       
     // Ignore the ones without a category
