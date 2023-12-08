@@ -51,7 +51,7 @@ module.exports = function(eleventyConfig) {
   /*=================*/
   /*   Collections   */
   /*=================*/
-  eleventyConfig.addCollection('works', getAllPosts)
+  // eleventyConfig.addCollection('works', getAllPosts)
   eleventyConfig.addCollection('categoryList', getCategoryList)
   eleventyConfig.addCollection('categorisedPosts', getCategorisedPosts)
 

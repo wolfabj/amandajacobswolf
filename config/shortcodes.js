@@ -1,6 +1,12 @@
 const Image = require('@11ty/eleventy-img')
 
+const localImgPath = "src/assets/images/"
+
 const imageShortcode = async (imageObj = {}) => {
+  if (!imageObj.src.startsWith("http")) {
+    imageObj.src = localImgPath + imageObj.src;
+  }
+
   const widths = imageObj.widths || [300, 600, 900, 1200]
   const className = imageObj.className || "image"
 

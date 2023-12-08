@@ -3,9 +3,10 @@
   <li class="work__item">
     <article class="work__preview">
       <h2><a href="{{ work.url | url }}">{{ work.data.title }}</a></h2>
-      <p>{{ work.data.excerpt }}</p>
+      <p>{{ work.data.filename }}</p>
+      {# {% image {src: work.data.filename, alt: "orugregwg", className: "image", widths: [300, 600] } %} #}
       <small>
-        <time>{{ work.data.date | readableDate }}</time>
+        <time>{{ work.data.date }}</time>
         <a class="category" href="/works/{{ work.data.category }}">{{ work.data.category }}</a>
       </small>
     </article>

@@ -1,13 +1,13 @@
 [
   {
     "name": "Red Flower",
-    "medium": "watercolor",
+    "category": "watercolor",
     "date": "2023",
     "filename": "red-flower.jpeg"
   },
   {
     "name": "den",
-    "medium": "oil",
+    "category": "oil",
     "date": "2022",
     "filename": "IMG_5321.jpeg"
   }
