@@ -1,3 +1,5 @@
+Note: This project is based on https://github.com/mangamaui/eleventy-not-so-minimal-blog-starter. Below is the original readme of that project.
+
 # Eleventy Not So Minimal Blog Starter
 
 A not so minimal starter for building a website + blog using the Eleventy static site generator.

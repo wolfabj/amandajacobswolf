@@ -68,6 +68,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode)
 
 
+  /*=================*/
+  /*   image sizes   */
+  /*=================*/
+  // eleventyConfig.setLibrary('md', markdown)
+
 
   return {
     dir: {

@@ -1,12 +1,11 @@
 {
-  "title": "Eleventy Not so minimal blog starter",
-  "url": "https://eleventy-not-so-minimal-blog-starter.netlify.app",
+  "title": "Amanda Jacobs Wolf",
+  "url": "https://amandajacobswolf.com",
   "language": "en",
-  "description": "Build your own website + blog with the 'not so minimal blog starter' which uses the Eleventy static site generator.",
+  "description": "Art website for Amanda Jacobs Wolf",
   "author": {
-    "name": "firstname lastname",
-    "email": "hello@blog.com"
+    "name": "Amanda Wolf"
   },
   "image": "/assets/social-image.jpg",
-  "feedUrl": "https://eleventy-not-so-minimal-blog-starter.netlify.app/feed.xml"
+  "feedUrl": "https://amandajacobswolf.com/feed.xml"
 }

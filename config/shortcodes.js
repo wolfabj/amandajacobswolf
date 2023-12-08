@@ -6,7 +6,7 @@ const imageShortcode = async (imageObj = {}) => {
 
   const sizes = "(min-width: 100px) 50vw, 100vw"
   const metadata =  await Image(imageObj.src, {
-      formats: ["webp"],
+      formats: ["jpeg", "webp"],
       outputDir: "./_site/assets/images/generated/",
       urlPath: "/assets/images/generated/",
       widths: widths

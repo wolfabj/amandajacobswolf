@@ -29,7 +29,7 @@ body {
   height: 100vh;
   line-height: 140%;
   min-width: 320px;
-  margin: 0 5em 0 1.5em;
+  margin: 0 1.5em 0 1.5em;
 
   @include breakpoint-md {
     font-size: 1.8rem;
@@ -69,16 +69,24 @@ p {
 nav {
   ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
   }
 }
 
 main {
-  flex: 0 1 100%;
-  margin: 1em 0 2em 0;
+  flex: 1; /* Allow the main content to grow and take available space */
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto 2em auto; /* Center the main content vertically with 'auto' margin */
 
   &:not(nav) {
     ul {
-      margin: .7em 0 .7em 1em;
+      margin: 0.7em 0 0.7em 0; /* Adjust margin for consistency */
+    }
+
+    p {
+      text-align: left; /* Left-justify the text within paragraphs */
     }
   }
 
@@ -90,7 +98,7 @@ main {
   }
 
   nav ul {
-    margin: .2em 0 2em 0;
+    margin: 0.2em 0 2em 0;
   }
 }
 
@@ -107,7 +115,8 @@ footer {
 
 header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer span {
@@ -124,12 +133,11 @@ nav ul li {
 
   &.active a {
     font-weight: 600;
-    text-decoration: underline;
   }
 
   a {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: underline;
     padding-bottom: 5px;
     transition: color 400ms;
   }
@@ -155,3 +163,17 @@ nav ul li {
   margin-bottom: 1em;
 }
 
+.title-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent */
+  transition: color 400ms;
+
+  &:hover {
+    color: inherit; /* Inherit the color on hover */
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
