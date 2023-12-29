@@ -1,5 +1,6 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+const { parse: parseCsv } = require("csv-parse/sync");
 
 const { 
   getAllPosts, 
@@ -44,7 +45,7 @@ module.exports = function(eleventyConfig) {
   /*=================*/
   /*     Layouts     */
   /*=================*/
-  eleventyConfig.addLayoutAlias('page', 'layouts/page')
+  eleventyConfig.addLayoutAlias('default', 'layouts/default')
   eleventyConfig.addLayoutAlias('article', 'layouts/article')
 
 
@@ -54,6 +55,19 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addCollection('works', getAllPosts)
   eleventyConfig.addCollection('categoryList', getCategoryList)
   eleventyConfig.addCollection('categorisedPosts', getCategorisedPosts)
+
+
+  /*=================*/
+  /*  Csv Extension  */
+  /*=================*/
+  /* Source: https://www.maxkohler.com/posts/eleventy-csv/ */
+  eleventyConfig.addDataExtension("csv", (contents, filepath) => {
+    const records = parseCsv(contents, {
+      columns: true,
+      skip_empty_lines: true,
+    });
+    return records;
+  });
 
   
   /*=================*/

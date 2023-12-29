@@ -1,0 +1,17 @@
+---
+layout: default
+pagination:
+    data: works
+    size: 1
+    alias: work
+permalink: "works/{{ work.name | slugify }}/"
+---
+
+<article class="work__preview">
+  <h2><a href="{{ work.url | url }}">{{ work.data.title }}</a></h2>
+  {% if work.filename %}
+    {% image {src: work.filename, alt: "orugregwg", className: "image", widths: [300, 600] } %}
+  {% endif %}
+  <p class="work__item__title">{{ work.name }}</p>
+  <p class="work__item__details">{{ work.year }}, {{ work.size }}</p>
+</article>

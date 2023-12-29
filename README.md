@@ -1,4 +1,6 @@
-Note: This project is based on https://github.com/mangamaui/eleventy-not-so-minimal-blog-starter. Below is the original readme of that project.
+Note: This project is based on https://github.com/mangamaui/eleventy-not-so-minimal-blog-starter. Below the title is the original readme of that project.
+
+For VS Code, the [Better Nunjucks](https://marketplace.visualstudio.com/items?itemName=ginfuru.better-nunjucks) extension is helpful for this project.
 
 # Eleventy Not So Minimal Blog Starter
 

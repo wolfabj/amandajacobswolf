@@ -1,5 +1,17 @@
-.article__item {
-  +.article__item {
+.work__item {
+  list-style-type: none;
+
+  +.work__item {
     margin-top: 1.5em;
   }
+}
+
+.work__item__title {
+  text-align: center;
+  font-style: italic;
+}
+
+.work__item__details {
+  margin-top: 0;
+  text-align: center;
 }
