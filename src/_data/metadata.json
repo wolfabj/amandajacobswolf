@@ -1,11 +1,11 @@
 {
-  "title": "Amanda Jacobs Wolf",
-  "url": "https://amandajacobswolf.com",
+  "title": "Amanda Wolf",
+  "url": "https://amandawolfstudio.com",
   "language": "en",
-  "description": "Art website for Amanda Jacobs Wolf",
+  "description": "Art website for Amanda Wolf",
   "author": {
     "name": "Amanda Wolf"
   },
-  "image": "/assets/social-image.jpg",
-  "feedUrl": "https://amandajacobswolf.com/feed.xml"
+  "image": "/assets/morning.jpg",
+  "feedUrl": "https://amandawolfstudio.com/feed.xml"
 }

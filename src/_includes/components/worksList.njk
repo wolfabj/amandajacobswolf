@@ -5,7 +5,7 @@
       <h2><a href="works/{{ work.name | slugify }}/">{{ work.data.title }}</a></h2>
       {% if work.filename %}
       <a href="{{ work.name | slugify }}/">
-        {% image {src: work.filename, alt: "orugregwg", className: "image", widths: [300, 600] } %}
+        {% image {src: work.filename, alt: work.name, className: "image", widths: [300, 600] } %}
       </a>
       {% endif %}
       <p class="work__item__title">{{ work.name }}</p>

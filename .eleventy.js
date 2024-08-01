@@ -34,7 +34,8 @@ module.exports = function(eleventyConfig) {
   /*===================================================*/
   /* files that need to be copied to the build folder  */
   /*===================================================*/
-  eleventyConfig.addPassthroughCopy('./src/assets/social-image.jpg')
+  // used as social image
+  eleventyConfig.addPassthroughCopy('./src/assets/morning.jpg')
   eleventyConfig.addPassthroughCopy('./src/assets/icons')
   eleventyConfig.addPassthroughCopy('./src/assets/sprite.svg')
   eleventyConfig.addPassthroughCopy({
@@ -55,6 +56,10 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addCollection('works', getAllPosts)
   eleventyConfig.addCollection('categoryList', getCategoryList)
   eleventyConfig.addCollection('categorisedPosts', getCategorisedPosts)
+  eleventyConfig.addFilter("find", function find(collection = [], name = "") {
+    console.log("finding " + name);
+    return collection.find(work => work.name === name);
+  });
 
 
   /*=================*/
