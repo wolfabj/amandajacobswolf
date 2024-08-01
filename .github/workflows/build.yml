@@ -28,7 +28,7 @@ jobs:
       - name: run eleventy
         run: |
           npm install
-          npx @11ty/eleventy
+          npm start
 
       - name: upload static site content
         uses: actions/upload-pages-artifact@v2
