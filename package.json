@@ -14,8 +14,8 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "author": {
-    "name": "Claudia Reynders",
-    "url": "https://twitter.com/claudia_rndrs"
+    "name": "Amanda Wolf",
+    "url": "https://amandawolfstudio.com"
   },
   "license": "MIT",
   "dependencies": {
