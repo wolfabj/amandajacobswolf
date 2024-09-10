@@ -4,6 +4,12 @@ title: "Oils"
 eleventyNavigation:
     key: oils
     order: 2
+pagination:
+  data: oils
+  size: 100
 ---
 
-Coming soon!
+<h1>{{ title }}</h1>
+
+{% set paintings = pagination.items %}
+{% include "components/paintingList.njk" %}

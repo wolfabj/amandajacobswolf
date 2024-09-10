@@ -15,3 +15,21 @@
   margin-top: 0;
   text-align: center;
 }
+
+.painting__item {
+  list-style-type: none;
+
+  +.painting__item {
+    margin-top: 1.5em;
+  }
+}
+
+.painting__item__title {
+  text-align: center;
+  font-style: italic;
+}
+
+.painting__item__details {
+  margin-top: 0;
+  text-align: center;
+}

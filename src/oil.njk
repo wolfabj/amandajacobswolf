@@ -1,0 +1,17 @@
+---
+layout: default
+pagination:
+    data: oils
+    size: 1
+    alias: oil
+permalink: "oils/{{ oil.name | slugify }}/"
+---
+
+<article class="work__preview">
+  <h2>{{ oil.name }}</h2>
+  {% if oil.filename %}
+    {% image {src: oil.filename, alt: oil.name, className: "image", widths: [1200] } %}
+  {% endif %}
+  <p class="work__item__title">{{ oil.name }}</p>
+  <p class="work__item__details">{{ oil.year }}, {{ oil.size }}</p>
+</article>
