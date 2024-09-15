@@ -13,5 +13,5 @@ permalink: "oils/{{ oil.name | slugify }}/"
     {% image {src: oil.filename, alt: oil.name, className: "image", widths: [1200] } %}
   {% endif %}
   <p class="work__item__title">{{ oil.name }}</p>
-  <p class="work__item__details">{{ oil.year }}, {{ oil.size }}</p>
+  <p class="work__item__details">{{ oil.year }}, {{ oil.size }}, {{ oil.medium }}</p>
 </article>
