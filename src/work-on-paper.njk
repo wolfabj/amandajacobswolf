@@ -1,0 +1,13 @@
+---
+layout: default
+pagination:
+    data: works-on-paper
+    size: 1
+    alias: watercolor
+permalink: "works-on-paper/{{ watercolor.name | slugify }}/"
+eleventyComputed:
+    title: "{{ watercolor.name }}"
+---
+
+{% set painting = watercolor %}
+{% include "components/painting.njk" %}

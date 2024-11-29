@@ -3,4 +3,4 @@ layout: default
 ---
 
 
-{% image {src: "morning.jpg", alt: "Morning", className: "image", widths: [1200] } %}
+{% image {src: "lois-rhubarb.jpg", alt: "Lois's Rhubarb", className: "image", widths: [1200] } %}

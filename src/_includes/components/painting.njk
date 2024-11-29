@@ -1,0 +1,8 @@
+<article class="painting__preview">
+  {% if painting.filename %}
+    {% image {src: painting.filename, alt: painting.name, className: "image", widths: [1200] } %}
+  {% endif %}
+  {% set values = [painting.year, painting.size, painting.medium] %}
+  <p class="painting__item__title">{{ painting.name }}</p>
+  <p class="painting__item__details">{{ values | select('truthy') | join(', ') }}</p>
+</article>

@@ -7,8 +7,9 @@
           {% image {src: painting.filename, alt: painting.name, className: "image", widths: [1200] } %}
         </a>
         {% endif %}
+        {% set values = [painting.year, painting.size, painting.medium] %}
         <p class="painting__item__title">{{ painting.name }}</p>
-        <p class="painting__item__details">{{ painting.year }}, {{ painting.size }}, {{ painting.medium }}</p>
+        <p class="painting__item__details">{{ values | select('truthy') | join(', ') }}</p>
       </article>
     </li>
   {% endfor %}
