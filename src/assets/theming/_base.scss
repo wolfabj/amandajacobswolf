@@ -177,3 +177,15 @@ img {
   width: 100%;
   height: auto;
 }
+
+.invisible-text {
+  color: $bg-clr;
+}
+
+#container{
+  width: 400px;
+}
+#floated{
+  float: right;
+  width: 150px;
+}
